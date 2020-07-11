@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
  * ClassName：JsonResult
  *
  * @Author 冷暖自知
- * @Date 2020/7/11 18:46
+ * @Date 2020/7/11 22:32
  * @Version 1.0
  * @Description
  */
@@ -17,12 +17,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class JsonResult<T> {
     private Integer code;
-
     private String message;
-
     private T data;
 
-    private JsonResult(Integer code,String message){
-        this(code,message,null);
+    public JsonResult(Integer code, String message) {
+        this(code, message, null);
     }
 }

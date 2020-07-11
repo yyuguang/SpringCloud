@@ -23,7 +23,7 @@ public class PaymentController {
     private PaymentService paymentService;
 
     @PostMapping("/create")
-    public JsonResult create(Payment payment) {
+    public JsonResult create(@RequestBody Payment payment) {
         int result = paymentService.create(payment);
         log.info("***插入结果{}", result);
         return result > 0 ? new JsonResult(200, "插入数据成功", result) : new JsonResult(444, "插入数据数据失败", null);
