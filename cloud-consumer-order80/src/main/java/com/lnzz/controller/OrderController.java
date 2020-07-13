@@ -23,7 +23,7 @@ import org.springframework.web.client.RestTemplate;
 @RequestMapping("/order")
 public class OrderController {
 
-    public static final String PAYMENT_URL = "http://localhost:8001";
+    public static final String PAYMENT_SRV = "http://CLOUD-PAYMENT-SERVICE";
 
     @Autowired
     private RestTemplate restTemplate;
@@ -31,12 +31,12 @@ public class OrderController {
     @GetMapping("/consumer/payment/create")
     public JsonResult<Payment> create(Payment payment) {
         log.info("调用了create方法。。。");
-        return restTemplate.postForObject(PAYMENT_URL + "/payment/create", payment, JsonResult.class);
+        return restTemplate.postForObject(PAYMENT_SRV + "/payment/create", payment, JsonResult.class);
     }
 
     @GetMapping("/consumer/payment/getPaymentById/{id}")
     public JsonResult<Payment> getPayment(@PathVariable("id") Long id) {
         log.info("调用了getPaymentById方法。。。");
-        return restTemplate.getForObject(PAYMENT_URL + "/payment/getPaymentById/" + id, JsonResult.class);
+        return restTemplate.getForObject(PAYMENT_SRV + "/payment/getPaymentById/" + id, JsonResult.class);
     }
 }
