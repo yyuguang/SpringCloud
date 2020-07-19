@@ -38,4 +38,9 @@ public class PaymentController {
         Payment result = paymentService.getPaymentById(id);
         return result != null ? new JsonResult(200, "查询数据成功，serverPort：" + serverPort, result) : new JsonResult(444, "暂无该数据，查询ID" + id, null);
     }
+
+    @GetMapping("/lb")
+    public String getPaymentLB(){
+        return serverPort;
+    }
 }

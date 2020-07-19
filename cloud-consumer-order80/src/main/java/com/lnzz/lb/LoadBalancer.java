@@ -1,5 +1,9 @@
 package com.lnzz.lb;
 
+import org.springframework.cloud.client.ServiceInstance;
+
+import java.util.List;
+
 /**
  * ClassName：LoadBalancer
  *
@@ -9,4 +13,11 @@ package com.lnzz.lb;
  * @Description
  */
 public interface LoadBalancer {
+    /**
+     * instances
+     *
+     * @param serviceInstances
+     * @return
+     */
+    ServiceInstance instances(List<ServiceInstance> serviceInstances);
 }
