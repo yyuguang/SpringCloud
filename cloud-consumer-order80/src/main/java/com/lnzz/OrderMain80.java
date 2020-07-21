@@ -1,6 +1,6 @@
 package com.lnzz;
 
-import com.lnzz.rule.MySelfRule;
+import com.rule.MySelfRule;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
