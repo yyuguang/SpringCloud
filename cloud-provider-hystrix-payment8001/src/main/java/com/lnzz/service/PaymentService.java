@@ -9,4 +9,25 @@ package com.lnzz.service;
  * @Description
  */
 public interface PaymentService {
+    /**
+     * 正常访问一切ok
+     *
+     * @param id
+     * @return
+     */
+    public String paymentInfo_OK(Integer id);
+
+    /**
+     * 超时
+     *
+     * @param id
+     * @return
+     */
+    public String paymentInfo_Timeout(Integer id);
+
+    /**
+     * @param id
+     * @return
+     */
+    public String paymentInfo_TimeOutHandler(Integer id);
 }

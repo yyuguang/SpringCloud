@@ -1,5 +1,8 @@
 package com.lnzz.service.impl;
 
+import com.lnzz.service.PaymentHystrixService;
+import org.springframework.stereotype.Component;
+
 /**
  * ClassName：PaymentFallbackService
  *
@@ -8,5 +11,15 @@ package com.lnzz.service.impl;
  * @Version 1.0
  * @Description
  */
-public class PaymentFallbackService {
+@Component
+public class PaymentFallbackService implements PaymentHystrixService {
+    @Override
+    public String paymentInfo_OK(Integer id) {
+        return "---- PaymentFallbackService fall back - paymentInfo_OK ---";
+    }
+
+    @Override
+    public String paymentInfo_Timeout(Integer id) {
+        return "---- PaymentFallbackService fall back - paymentInfo_Timeout ---";
+    }
 }
