@@ -1,5 +1,7 @@
 package com.lnzz.service;
 
+import org.springframework.web.bind.annotation.PathVariable;
+
 /**
  * ClassName：PaymentService
  *
@@ -30,4 +32,6 @@ public interface PaymentService {
      * @return
      */
     public String paymentInfo_TimeOutHandler(Integer id);
+
+    public String paymentCircuitBreaker(@PathVariable("id") Integer id);
 }
