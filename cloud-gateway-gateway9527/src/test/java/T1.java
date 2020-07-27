@@ -1,4 +1,4 @@
-package PACKAGE_NAME;
+import java.time.ZonedDateTime;
 
 /**
  * ClassName：T1
@@ -9,4 +9,8 @@ package PACKAGE_NAME;
  * @Description
  */
 public class T1 {
+    public static void main(String[] args) {
+        ZonedDateTime zbj = ZonedDateTime.now();
+        System.out.println(zbj);
+    }
 }
