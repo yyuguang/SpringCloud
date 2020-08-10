@@ -8,10 +8,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="cloud-consumer-order80" />
+        <module name="cloudalibaba-provider-payment9001" />
         <module name="cloud-provider-hystrix-payment8001" />
         <module name="cloud-config-center-3344" />
         <module name="cloud-eureka-server7002" />
         <module name="cloud-eureka-server7001" />
+        <module name="cloudalibaba-consumer-nacos-order83" />
         <module name="cloud-api-commons" />
         <module name="cloud-consumerzk-order80" />
         <module name="cloud-provider-payment8004" />
@@ -23,6 +25,7 @@
         <module name="cloud-stream-rabbitmq-provider8801" />
         <module name="cloud-stream-rabbitmq-provider8803" />
         <module name="cloud-consumer-consul-order80" />
+        <module name="cloudalibaba-provider-payment9002" />
         <module name="cloud-config-client-3355" />
         <module name="cloud-gateway-gateway9527" />
         <module name="cloud-consumer-hystrix-dashboard9001" />
